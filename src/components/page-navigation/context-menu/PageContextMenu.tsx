@@ -1,8 +1,6 @@
 "use client";
 
-import type React from "react";
-
-import { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { Flag, Edit3, Files, Clipboard, Trash2 } from "lucide-react";
 import { createPortal } from "react-dom";
 import type { Page } from "@/types";

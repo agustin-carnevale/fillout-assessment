@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: "Form Builder - Fillout Assessment",
   description:
     "A modern form builder application with drag-and-drop page navigation.",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({

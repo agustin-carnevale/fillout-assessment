@@ -1,4 +1,4 @@
-import { PageNavigation } from "@/components/page-navigation/page-navigation";
+import { PageNavigation } from "@/components/page-navigation/PageNavigation";
 
 export default function Home() {
   return (

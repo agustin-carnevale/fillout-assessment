@@ -1,7 +1,7 @@
 "use client";
 
+import React, { useCallback } from "react";
 import type { ReactNode } from "react";
-import { useCallback } from "react";
 import {
   DndContext,
   closestCenter,
@@ -18,7 +18,6 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { Page } from "@/types";
-import React from "react";
 
 interface DragAndDropWrapperProps {
   pages: Page[];

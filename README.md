@@ -36,7 +36,7 @@ Bonus:
 - **Page Management**: Add, rename, duplicate, copy, and delete pages
 - **Keyboard Navigation**: Almost full keyboard support with shortcuts (see [details here](KEYBOARD_NAVIGATION.md))
 - **Accessibility**: WCAG compliant with proper ARIA labels and keyboard navigation
-- **Responsive Design**: Works seamlessly on many screen sizes (desktop only)
+- **Responsive Design**: Works seamlessly on most screen sizes (even mobile although not optimized for it)
 - **TypeScript**: Fully typed for better development experience
 - **Modern UI**: Clean, professional interface with smooth animations
 

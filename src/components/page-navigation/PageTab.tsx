@@ -1,10 +1,10 @@
 "use client";
 
-import { Info, FileText, CheckCircle, MoreVertical } from "lucide-react";
 import { useCallback, useState } from "react";
-import type { Page } from "@/types";
-import { PageContextMenu } from "./page-context-menu";
+import { Info, FileText, CheckCircle, MoreVertical } from "lucide-react";
 import { cn } from "@/lib/utils";
+import type { Page } from "@/types";
+import { PageContextMenu } from "./context-menu/PageContextMenu";
 
 const iconMap = {
   info: Info,
