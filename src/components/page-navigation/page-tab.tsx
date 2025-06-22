@@ -86,7 +86,7 @@ export function PageTab({
     <div
       className={cn(
         "group relative flex items-center gap-2.5 px-4 py-3 text-sm font-medium transition-all duration-200 cursor-pointer rounded-xl select-none",
-        isDragging && "opacity-50 scale-95",
+        isDragging && "shadow-lg rotate-2 scale-105",
         isActive && "border bg-white text-gray-900 border-[#e1e1e1] shadow-sm",
         !isActive && [
           "bg-[#ebedf0] text-gray-500 border-2 border-transparent",

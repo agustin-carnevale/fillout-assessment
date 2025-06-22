@@ -18,6 +18,7 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import type { Page } from "@/types";
+import React from "react";
 
 interface DragAndDropWrapperProps {
   pages: Page[];
@@ -53,6 +54,14 @@ function SortableItem({ id, children }: SortableItemProps) {
     );
   }, [listeners]);
 
+  // Clone the child and inject isDragging prop if it's a valid React element
+  const childWithDragging =
+    typeof children === "object" && children && (children as any).type
+      ? (React.cloneElement(children as React.ReactElement<any>, {
+          isDragging,
+        }) as React.ReactNode)
+      : children;
+
   return (
     <div
       ref={setNodeRef}
@@ -62,7 +71,7 @@ function SortableItem({ id, children }: SortableItemProps) {
       className={isDragging ? "z-10" : ""}
       aria-describedby={`sortable-item-${id}`}
     >
-      {children}
+      {childWithDragging}
     </div>
   );
 }
