@@ -99,7 +99,7 @@ export function PageNavigation() {
         try {
           await navigator.clipboard.writeText(page.name);
           // Could add toast notification here for success feedback
-        } catch (error) {
+        } catch {
           // Fallback for older browsers or when clipboard API is not available
           const textArea = document.createElement("textarea");
           textArea.value = page.name;
@@ -107,7 +107,7 @@ export function PageNavigation() {
           textArea.select();
           try {
             document.execCommand("copy");
-          } catch (fallbackError) {
+          } catch {
             // Silent fail for clipboard operations
           }
           document.body.removeChild(textArea);
@@ -148,7 +148,7 @@ export function PageNavigation() {
         }
       }
     },
-    [pages.length, activePageId, pages, handleSelectPage]
+    [activePageId, pages, handleSelectPage]
   );
 
   const handleReorderPages = useCallback((reorderedPages: Page[]) => {

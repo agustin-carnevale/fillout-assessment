@@ -55,10 +55,15 @@ function SortableItem({ id, children }: SortableItemProps) {
 
   // Clone the child and inject isDragging prop if it's a valid React element
   const childWithDragging =
-    typeof children === "object" && children && (children as any).type
-      ? (React.cloneElement(children as React.ReactElement<any>, {
-          isDragging,
-        }) as React.ReactNode)
+    typeof children === "object" &&
+    children &&
+    (children as React.ReactElement).type
+      ? (React.cloneElement(
+          children as React.ReactElement<{ isDragging?: boolean }>,
+          {
+            isDragging,
+          }
+        ) as React.ReactNode)
       : children;
 
   return (
