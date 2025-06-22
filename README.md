@@ -86,12 +86,11 @@ pnpm dev
 src/
 ├── app/                    # Next.js app directory
 │   ├── layout.tsx          # Root layout
-│   └── page.tsx            # Home page
+│   ├── page.tsx            # Home page
+│   └── error.tsx           # Error boundary
 ├── components/             # React components
-│   ├── page-navigation/    # Page navigation components
-│   ├── ui/                 # Reusable UI components
-│   └── theme-provider.tsx  # Theme provider
-├── hooks/                  # Custom React hooks
+│   └── page-navigation/    # Page navigation components
+│       └── context-menu/   # Context menu components
 ├── lib/                    # Utility functions
 ├── styles/                 # Global styles
 └── types/                  # TypeScript type definitions

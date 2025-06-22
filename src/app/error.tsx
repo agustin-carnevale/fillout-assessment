@@ -35,7 +35,8 @@ export default function Error({ error, reset }: ErrorProps) {
           Something went wrong
         </h2>
         <p className="text-gray-600 text-center mb-6">
-          An unexpected error occurred. Please try refreshing the page.
+          An unexpected error occurred. Please try refreshing the page or come
+          back later.
         </p>
         <div className="flex gap-3">
           <button
