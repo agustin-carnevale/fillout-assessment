@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useState, memo } from "react";
 import { Info, FileText, CheckCircle, MoreVertical } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Page } from "@/types";
@@ -24,7 +24,7 @@ interface PageTabProps {
   onDelete: (pageId: string) => void;
 }
 
-export function PageTab({
+export const PageTab = memo(function PageTab({
   page,
   isActive,
   isDragging = false,
@@ -137,4 +137,4 @@ export function PageTab({
       </PageContextMenu>
     </div>
   );
-}
+});

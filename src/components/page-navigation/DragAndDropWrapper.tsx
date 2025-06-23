@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback } from "react";
+import React, { useCallback, memo } from "react";
 import type { ReactNode } from "react";
 import {
   DndContext,
@@ -30,7 +30,10 @@ interface SortableItemProps {
   children: ReactNode;
 }
 
-function SortableItem({ id, children }: SortableItemProps) {
+const SortableItem = memo(function SortableItem({
+  id,
+  children,
+}: SortableItemProps) {
   const {
     attributes,
     listeners,
@@ -78,7 +81,7 @@ function SortableItem({ id, children }: SortableItemProps) {
       {childWithDragging}
     </div>
   );
-}
+});
 
 export function DragAndDropWrapper({
   pages,
